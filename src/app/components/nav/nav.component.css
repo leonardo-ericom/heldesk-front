@@ -24,7 +24,7 @@ img {
 }
 
 .menu {
-    margin: 1rem 0 0 1rem;
+    margin: 1rem 1rem 1rem 1rem;
     color: white;
     background: linear-gradient(0deg, rgba(54, 162, 214, 1) 25%, rgba(0, 15, 210, 0.9585959383753502) 100%);
 }
