@@ -8,3 +8,7 @@ img {
     height: 25rem;
     margin: -2rem auto 1rem auto;
 }
+
+p {
+    text-align: center;
+}
