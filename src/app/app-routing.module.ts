@@ -11,16 +11,12 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   {
     path: "",
-    component: NavComponent, canActivate: [AuthGuard],
+    component: NavComponent,
+    canActivate: [AuthGuard],
     children: [
-      {
-        path: "home",
-        component: HomeComponent,
-      },
-      {
-        path: "tecnicos",
-        component: TecnicoListComponent,
-      },
+      { path: "home", component: HomeComponent },
+
+      { path: "tecnicos", component: TecnicoListComponent },
     ],
   },
 ];
