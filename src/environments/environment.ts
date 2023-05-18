@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+ /*baseUrl:'https://os-api-full-java.herokuapp.com'
+ URL PARA DEPLOY NA NUVEM COM HEROKU
+ */ 
+
+
+/*URL PARA ACESSO A MYSQL LOCAL */
+
+ baseUrl:'http://192.168.25.131:8080'
 };
 
 /*

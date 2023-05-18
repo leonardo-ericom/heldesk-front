@@ -14,7 +14,7 @@
             <input [formControl]="senha" required [(ngModel)]="creds.senha" name="senha" type="password" matInput placeholder="Exemplo 123" />
         </mat-form-field>
 
-        <button [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">
+        <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">
       Login
     </button>
     </form>
