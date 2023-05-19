@@ -25,7 +25,12 @@ img {
 
 .menu {
     margin: 1rem 1rem 0rem 1rem;
-    text-decoration: underline;
     color: white;
     background: linear-gradient(0deg, rgba(54, 162, 214, 1) 25%, rgba(0, 15, 210, 0.9585959383753502) 100%);
+}
+
+mat-Icon {
+    justify-content: center;
+    align-items: center;
+    margin: -0.1rem auto auto auto;
 }

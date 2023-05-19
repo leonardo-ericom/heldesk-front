@@ -32,7 +32,8 @@ import {
   AuthInterceptor,
   AuthInterceptorProvider,
 } from "./interceptors/auth.interceptor";
-import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecnico-create.component";
+import { NgxMaskModule } from "ngx-mask";
 
 @NgModule({
   declarations: [
@@ -68,10 +69,15 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
     MatIconModule,
     MatListModule,
     MatCardModule,
+
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
       progressBar: true,
+    }),
+
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false,
     }),
   ],
   providers: [AuthInterceptorProvider],
