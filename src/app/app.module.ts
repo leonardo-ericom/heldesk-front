@@ -32,6 +32,7 @@ import {
   AuthInterceptor,
   AuthInterceptorProvider,
 } from "./interceptors/auth.interceptor";
+import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {
     HeaderComponent,
     TecnicoListComponent,
     LoginComponent,
+    TecnicoCreateComponent,
   ],
   imports: [
     BrowserModule,
