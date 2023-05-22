@@ -7,6 +7,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { AUTO_STYLE } from "@angular/animations";
 import { AuthGuard } from "./auth/auth.guard";
 import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecnico-create.component";
+import { TecnicoUpdateComponent } from "./components/tecnico/tecnico-update/tecnico-update.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
 
       { path: "tecnicos", component: TecnicoListComponent },
       { path: "tecnicos/create", component: TecnicoCreateComponent },
+      { path: "tecnicos/update/:id", component: TecnicoUpdateComponent },
     ],
   },
 ];
