@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         this.toast.info(
           "Atenção ao preencher os dados, bom trabalho!!",
           "Login",
-          { timeOut: 7000 }
+          { timeOut: 3000 }
         );
         this.toast.success("Bem vindo");
       },
