@@ -29,3 +29,11 @@ h1 {
     text-decoration: underline;
     color: rgba(18, 77, 239, 0.897);
 }
+
+.edit {
+    color: rgba(18, 77, 239, 0.897);
+}
+
+.delete {
+    color: red;
+}
