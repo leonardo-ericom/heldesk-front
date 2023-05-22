@@ -8,6 +8,7 @@ import { AUTO_STYLE } from "@angular/animations";
 import { AuthGuard } from "./auth/auth.guard";
 import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecnico-create.component";
 import { TecnicoUpdateComponent } from "./components/tecnico/tecnico-update/tecnico-update.component";
+import { TecnicoDeleteComponent } from "./components/tecnico/tecnico-delete/tecnico-delete.component";
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: "tecnicos", component: TecnicoListComponent },
       { path: "tecnicos/create", component: TecnicoCreateComponent },
       { path: "tecnicos/update/:id", component: TecnicoUpdateComponent },
+       { path: "tecnicos/delete/:id", component: TecnicoDeleteComponent },
       
     ],
   },
