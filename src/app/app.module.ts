@@ -1,4 +1,3 @@
-
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
@@ -35,13 +34,15 @@ import {
 } from "./interceptors/auth.interceptor";
 import { TecnicoCreateComponent } from "./components/tecnico/tecnico-create/tecnico-create.component";
 import { NgxMaskModule } from "ngx-mask";
-import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
-import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
-import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
-import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { TecnicoUpdateComponent } from "./components/tecnico/tecnico-update/tecnico-update.component";
+import { TecnicoDeleteComponent } from "./components/tecnico/tecnico-delete/tecnico-delete.component";
+import { ClienteCreateComponent } from "./components/cliente/cliente-create/cliente-create.component";
+import { ClienteDeleteComponent } from "./components/cliente/cliente-delete/cliente-delete.component";
 import { ClienteListComponent } from "./components/cliente/cliente-list/cliente-list.component";
-import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
-import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
+import { ClienteUpdateComponent } from "./components/cliente/cliente-update/cliente-update.component";
+import { ChamadoListComponent } from "./components/chamado/chamado-list/chamado-list.component";
+import { Ng2SearchPipeModule } from "ng2-search-filter";
+import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 
 @NgModule({
   declarations: [
@@ -59,9 +60,7 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
     ClienteListComponent,
     ClienteUpdateComponent,
     ChamadoListComponent,
- 
-   
-   
+    ChamadoCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +86,7 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
     MatIconModule,
     MatListModule,
     MatCardModule,
+    Ng2SearchPipeModule,
 
     ToastrModule.forRoot({
       timeOut: 4000,
