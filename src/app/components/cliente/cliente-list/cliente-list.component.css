@@ -1,0 +1,39 @@
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 30%;
+}
+
+button {
+    float: right;
+    text-align: center;
+    margin-right: 4%;
+    height: 40px;
+    margin-top: 20px;
+    width: 10%;
+    margin: auto;
+    color: rgb(245, 248, 248);
+    background: linear-gradient(0deg, rgba(54, 162, 214, 1) 25%, rgba(0, 15, 210, 0.9585959383753502) 100%);
+}
+
+h1 {
+    width: center;
+    text-align: center;
+    text-decoration: underline;
+    color: rgba(18, 77, 239, 0.897);
+}
+
+.edit {
+    color: rgba(18, 77, 239, 0.897);
+}
+
+.delete {
+    color: red;
+}
