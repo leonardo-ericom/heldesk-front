@@ -1,6 +1,6 @@
 .container {
     width: 50rem;
-    margin: auto;
+    margin: auto auto 3rem auto;
     padding: 1rem;
     border-radius: .6rem;
     color: rgba(18, 77, 239, 0.897);
