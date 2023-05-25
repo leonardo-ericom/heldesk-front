@@ -37,15 +37,3 @@ h1 {
 .delete {
     color: red;
 }
-
-mat-radio-group {
-    display: flex;
-    height: 40px;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-}
-
-mat-label {
-    padding: auto;
-    color: rgb(20, 20, 232);
-}
