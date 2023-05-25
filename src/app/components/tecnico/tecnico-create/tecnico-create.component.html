@@ -10,26 +10,26 @@
             <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">CLIENTE</mat-checkbox>
         </section>
 
-        <mat-form-field class="fullWidth" appearance="legacy">
+        <mat-form-field class="fullWidth" appearance="outline">
             <mat-label>Nome</mat-label>
             <input [(ngModel)]="tecnico.nome" name="nome" [formControl]="nome" required matInput placeholder="Ex.. Maria Clara" maxlength="50">
             <mat-icon matSuffix>badge</mat-icon>
         </mat-form-field>
 
 
-        <mat-form-field class="fullWidth" appearance="legacy">
+        <mat-form-field class="fullWidth" appearance="outline">
             <mat-label>CPF</mat-label>
             <input [(ngModel)]="tecnico.cpf" name="cpf" [formControl]="cpf" required matInput placeholder="Ex..000.000.000-00" mask="000.000.000-00">
             <mat-icon matSuffix>pin </mat-icon>
         </mat-form-field>
 
-        <mat-form-field class="fullWidth" appearance="legacy">
+        <mat-form-field class="fullWidth" appearance="outline">
             <mat-label>E-mail</mat-label>
             <input [(ngModel)]="tecnico.email" name="email" [formControl]="email" required matInput placeholder="Ex.. fulano@mail.com">
             <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
-        <mat-form-field class="fullWidth" appearance="legacy">
+        <mat-form-field class="fullWidth" appearance="outline">
             <mat-label>Senha</mat-label>
             <input [(ngModel)]="tecnico.senha" name="senha" [formControl]="senha" required type="password" matInput placeholder="Ex.. 1234">
             <mat-icon matSuffix>password</mat-icon>

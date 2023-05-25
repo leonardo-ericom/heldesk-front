@@ -3,14 +3,6 @@
     margin: auto;
 }
 
-table {
-    width: 100%;
-}
-
-mat-form-field {
-    width: 30%;
-}
-
 button {
     float: right;
     text-align: center;
@@ -21,6 +13,14 @@ button {
     margin: auto;
     color: rgb(245, 248, 248);
     background: linear-gradient(0deg, rgba(54, 162, 214, 1) 25%, rgba(0, 15, 210, 0.9585959383753502) 100%);
+}
+
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 30%;
 }
 
 h1 {
@@ -36,4 +36,16 @@ h1 {
 
 .delete {
     color: red;
+}
+
+mat-radio-group {
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+mat-label {
+    padding: auto;
+    color: rgb(20, 20, 232);
 }
