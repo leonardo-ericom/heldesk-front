@@ -7,15 +7,14 @@ import { Tecnico } from "src/app/models/tecnico";
 import { ChamadoService } from "src/app/services/chamado.service";
 import { ClienteService } from "src/app/services/cliente.service";
 import { TecnicoService } from "src/app/services/tecnico.service";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
-  selector: 'app-chamado-update',
-  templateUrl: './chamado-update.component.html',
-  styleUrls: ['./chamado-update.component.css']
+  selector: "app-chamado-update",
+  templateUrl: "./chamado-update.component.html",
+  styleUrls: ["./chamado-update.component.css"],
 })
 export class ChamadoUpdateComponent implements OnInit {
-
   chamado: Chamado = {
     prioridade: "",
     status: "",
@@ -41,29 +40,38 @@ export class ChamadoUpdateComponent implements OnInit {
     private chamadoService: ChamadoService,
     private clienteService: ClienteService,
     private tecnicoService: TecnicoService,
-    private toastrService: ToastrService,
-    private router: Router
+    private toastService:    ToastrService,
+    private router: Router,
+    private route: ActivatedRoute,
   ) {}
 
   ngOnInit(): void {
     this.findAllCliente();
     this.findAllTecnicos();
+    this.chamado.id = this.route.snapshot.paramMap.get("id");
+    this.findById();
+    this.findAllCliente();
+    this.findAllCliente();
   }
-  create(): void {
-    this.chamadoService.create(this.chamado).subscribe(
-      (reposta) => {
-        this.toastrService.success(
-          "Chamado criado com sucesso",
-          "Novo Chamado"
-        );
-        this.router.navigate(["chamados"]);
+
+  findById(): void {
+    this.chamadoService.findById(this.chamado.id).subscribe(
+      (resposta) => {
+        this.chamado = resposta;
       },
       (ex) => {
-        this.toastrService.error(ex.error.error);
+        this.toastService.error(ex.error.error);
       }
     );
   }
-
+  update(): void {
+    this.chamadoService.update(this.chamado).subscribe(resposta => {
+      this.toastService.success('Chamado atualizado com sucesso', 'Atualizar chamado');
+      this.router.navigate(['chamados']);
+    }, ex => {
+      this.toastService.error(ex.error.error);
+    })
+  }
   findAllCliente(): void {
     this.clienteService.findAll().subscribe((resposta) => {
       this.clientes = resposta;
@@ -84,5 +92,38 @@ export class ChamadoUpdateComponent implements OnInit {
       this.tecnico.valid &&
       this.cliente.valid
     );
+  }
+  retornaStatus(status: any): String {
+    switch (status) {
+      case 0:
+        return "AGUARDANDO_ATENDIMENTO";
+        break;
+      case 1:
+        return "EM_ATENDIMENTO";
+        break;
+      case 2:
+        return "PAUSADO";
+        break;
+      case 3:
+        return "ENCERRADO";
+        break;
+      default:
+        return "ENCERRADO";
+        break;
+    }
+  }
+  retornaPrioridade(prioridade: any): string {
+    switch (prioridade) {
+      case 0:
+        return "BAIXA";
+        break;
+      case 1:
+        return "MEDIA";
+        break;
+      case 2:
+        return "ALTA";
+        break;
+    }
+    return "ALTA";
   }
 }
