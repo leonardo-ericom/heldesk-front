@@ -126,4 +126,13 @@ export class ChamadoUpdateComponent implements OnInit {
     }
     return "ALTA";
   }
+  prioridadeColor(x: any) {
+    if (x == "BAIXA") {
+      return "BAIXA";
+    } else if (x == "MEDIA") {
+      return "MEDIA";
+    } else {
+      return "ALTA";
+    }
+  }
 }

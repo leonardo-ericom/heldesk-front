@@ -20,6 +20,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
+import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { NavComponent } from "./components/nav/nav.component";
@@ -45,6 +46,8 @@ import { Ng2SearchPipeModule } from "ng2-search-filter";
 import { ChamadoCreateComponent } from "./components/chamado/chamado-create/chamado-create.component";
 import { ChamadoUpdateComponent } from "./components/chamado/chamado-update/chamado-update.component";
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -65,6 +68,9 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     ChamadoCreateComponent,
     ChamadoUpdateComponent,
     ChamadoReadComponent,
+    DashboardComponent,
+ 
+  
   ],
   imports: [
     BrowserModule,
@@ -91,6 +97,7 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
     MatListModule,
     MatCardModule,
     Ng2SearchPipeModule,
+    MatMenuModule,
 
     ToastrModule.forRoot({
       timeOut: 4000,

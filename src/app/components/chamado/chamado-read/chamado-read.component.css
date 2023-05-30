@@ -41,3 +41,15 @@ p {
     margin-top: 3rem;
     opacity: .5;
 }
+
+td.BAIXA {
+    color: rgb(77, 223, 77);
+}
+
+td.MEDIA {
+    color: yellow;
+}
+
+td.ALTA {
+    color: red;
+}

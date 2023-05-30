@@ -21,6 +21,7 @@ export class ChamadoListComponent implements OnInit {
     "cliente",
     "tecnico",
     "dataAbertura",
+    "dataFechamento",
     "prioridade",
     "status",
     "acoes",
@@ -94,6 +95,15 @@ export class ChamadoListComponent implements OnInit {
       this.dataSource = new MatTableDataSource<Chamado>(resposta);
       
     });  
+}
+prioridadeColor(x: any) {
+  if (x == "0") {
+    return "BAIXA";
+  } else if (x == "1") {
+    return "MEDIA";
+  } else {
+    return "ALTA";
+  }
 }
 }
 

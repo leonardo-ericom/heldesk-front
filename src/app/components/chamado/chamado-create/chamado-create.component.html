@@ -4,19 +4,20 @@
 
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Título do Chamado</mat-label>
-            <input name="titulo" [(ngModel)]="chamado.titulo" [formControl]="titulo" required matInput placeholder="Ex. Manutencao" />
+            <mat-label>Solicitação</mat-label>
+            <input name="titulo" [(ngModel)]="chamado.titulo" [formControl]="titulo" required matInput placeholder="Ex. Descreva a solicitaçao do cliente" />
         </mat-form-field>
     </form>
 
+
     <div class="status-prioridade">
         <mat-form-field appearance="outline">
-            <mat-label>Selecione um Status</mat-label>
-            <mat-select name="status" [(ngModel)]="chamado.status" [formControl]="status" required>
+            <mat-label>Selecione um status</mat-label>
+            <mat-select [(ngModel)]="chamado.status" name="status" [formControl]="status" required>
                 <mat-option value="0">AGUARDANDO_ATENDIMENTO</mat-option>
                 <mat-option value="1">EM_ATENDIMENTO</mat-option>
                 <mat-option value="2">PAUSADO</mat-option>
-                <mat-option value="3">ENCERRADO</mat-option>
+
             </mat-select>
         </mat-form-field>
 
@@ -50,9 +51,9 @@
     </div>
 
     <form class="form">
-        <mat-form-field class="full-width observacoes" appearance="outline">
-            <mat-label>Deixe suas observaçoões sobre este chamado</mat-label>
-            <textarea name="observacoes" [(ngModel)]="chamado.observacoes" [formControl]="" required class="observacoes" matInput placeholder="Ex. Descreva qualquer informaçao sobre o atendimento..."></textarea>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Deixe uma observação</mat-label>
+            <textarea [(ngModel)]="chamado.observacoes" name="observacoes" [formControl]="observacoes" required class="observacoes" matInput placeholder="Ex. trocar bateria de notebook queimada..."></textarea>
         </mat-form-field>
     </form>
 

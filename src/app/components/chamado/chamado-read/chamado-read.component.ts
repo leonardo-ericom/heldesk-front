@@ -24,6 +24,8 @@ export class ChamadoReadComponent implements OnInit {
     nomeTecnico: "",
   };
 
+  
+
   clientes: Cliente[] = [];
   tecnicos: Tecnico[] = [];
 
@@ -74,6 +76,7 @@ export class ChamadoReadComponent implements OnInit {
         return "ENCERRADO";
         break;
     }
+    
   }
   retornaPrioridade(prioridade: any): string {
     switch (prioridade) {
@@ -89,4 +92,14 @@ export class ChamadoReadComponent implements OnInit {
     }
     return "ALTA";
   }
+  prioridadeColor(x: any) {
+    if (x == "ALTA") {
+      return "alta";
+    } else if (x == "MEDIA") {
+      return "media";
+    } else {
+      return "alta";
+    }
+  }
 }
+
